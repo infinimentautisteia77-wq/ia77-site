@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande de devis — Infiniment Autiste 77</title>
+  <meta name="description" content="Demande de devis pour accompagnement et interventions IA77 - Infiniment Autiste 77">
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f7fb;
+      color: #0b1736;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ffffff;
+      border-bottom: 3px solid #0a7bdc;
+      text-align: center;
+      padding: 1rem;
+    }
+    header h1 {
+      color: #0a7bdc;
+      margin: 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0a7bdc;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #0a7bdc;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #095ca7;
+    }
+    footer {
+      background-color: #ffffff;
+      border-top: 3px solid #0a7bdc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Infiniment Autiste 77 — IA77</h1>
+  </header>
+
+  <main>
+    <h2>Demande de devis personnalisé</h2>
+    <p>
+      L’association <strong>Infiniment Autiste 77</strong> accompagne les familles dans toutes leurs démarches administratives 
+      et éducatives. Nous proposons des prises en charge adaptées, à domicile ou en structure, selon les besoins de chaque enfant ou jeune.
+    </p>
+
+    <p>
+      Un <strong>tarif raisonnable</strong> est demandé aux familles, variant selon le type d’intervention et la fréquence des séances.  
+      Les devis sont transmis individuellement après un premier contact afin d’établir une proposition sur mesure.
+    </p>
+
+    <h3>💶 Paiement et avantages</h3>
+    <p>
+      L’association accepte les <strong>chèques CESU</strong> préfinancés ou déclarés.  
+      Ces paiements permettent aux familles de bénéficier du <strong>remboursement par crédit d’impôt à hauteur de 50 %</strong> 
+      des sommes engagées, conformément aux dispositions légales pour les services à la personne.
+    </p>
+
+    <p>
+      L’ensemble des cotisations ou participations sont à régler au début de chaque mois.  
+      Un devis clair et détaillé est envoyé par mail dès la validation du projet d’accompagnement.
+    </p>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="contact.html" class="btn">📩 Faire une demande de devis</a>
+    </div>
+  </main>
+
+  <footer>
+    Infiniment Autiste 77 — Association à but non lucratif • Boissy-Saint-Léger (94)<br>
+    Contact : infinimentautiste.ia77@gmail.com
+  </footer>
+</body>
+</html>
