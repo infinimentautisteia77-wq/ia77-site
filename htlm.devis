@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — IA77</title>
+<meta name="description" content="Contact IA77 : coordonnées et formulaire. Devis personnalisé après contact.">
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;margin:0;background:#f5f7fb;color:#0b1736}
+header,footer{background:#fff;border-color:#0a7bdc}
+header{border-bottom:3px solid #0a7bdc;padding:1rem;text-align:center}
+nav a{margin:.2rem .4rem;color:#0a7bdc;text-decoration:none;font-weight:700}
+h1,h2{color:#0a7bdc;margin:.4rem 0}
+main{padding:1rem 1.25rem;line-height:1.6;max-width:760px;margin:auto}
+.section{background:#fff;margin:1rem 0;padding:1rem;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
+label{display:block;margin:.5rem 0 .2rem}
+input,textarea{width:100%;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
+button{display:inline-block;padding:.6rem 1rem;border-radius:6px;background:#0a7bdc;color:#fff;border:none;font-weight:700}
+.success{background:#e8f7ee;border:1px solid #b8e1c1;padding:.8rem;border-radius:8px;margin-top:.8rem;display:none}
+.small{color:#5b6b88;font-size:.95rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Contact — IA77</h1>
+  <nav>
+    <a href="index.html">Accueil</a> ·
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="section">
+    <h2>Coordonnées</h2>
+    <p>📍 Boissy-Saint-Léger (94)<br>
+       📧 <a href="mailto:infinimentautiste.ia77@gmail.com">infinimentautiste.ia77@gmail.com</a><br>
+       📱 <a href="tel:+33766378462">07 66 37 84 62</a></p>
+    <p>Après réception de votre message, un <strong>devis personnalisé</strong> pourra vous être envoyé selon vos besoins.</p>
+  </section>
+
+  <section class="section">
+    <h2>Formulaire</h2>
+    <form id="f">
+      <label>Nom<input name="nom" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Sujet<input name="sujet" required></label>
+      <label>Message<textarea name="message" rows="6" required></textarea></label>
+      <button type="submit">Envoyer</button>
+      <div id="ok" class="success">Merci, votre message a bien été transmis. Nous revenons vers vous très vite.</div>
+      <p class="small">Par défaut, l’envoi ouvre votre application e-mail. Si vous préférez un envoi direct (sans ouvrir Mail), je peux l’activer via Formspree.</p>
+    </form>
+  </section>
+</main>
+<footer>© 2025 Infiniment Autiste 77 — IA77 • SIREN 943507343 • RNA W772011360</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit', function(e){
+  e.preventDefault();
+  const d=new FormData(this);
+  const subject=encodeURIComponent('Contact IA77 — '+(d.get('sujet')||''));
+  const body=encodeURIComponent((d.get('message')||'')+'\n\n— '+(d.get('nom')||'')+' ('+(d.get('email')||'')+')');
+  location.href='mailto:infinimentautiste.ia77@gmail.com?subject='+subject+'&body='+body;
+  document.getElementById('ok').style.display='block';
+  this.reset();
+});
+</script>
+</body>
+</html>
