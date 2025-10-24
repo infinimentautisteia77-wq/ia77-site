@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Infiniment Autiste 77 — IA77</title>
+<meta name="description" content="IA77 : accompagnements adaptés, inclusion scolaire, interventions spécialisées, cafés aidants, sorties adaptées, démarches CESU/URSSAF et crédit d’impôt.">
+<style>
+:root{--brand:#0a7bdc;--fg:#0b1736;--bg:#f5f7fb;--card:#ffffff;--muted:#5b6b88}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--fg)}
+header,footer{background:#fff;border-color:var(--brand)}
+header{border-bottom:3px solid var(--brand);padding:1rem;text-align:center}
+nav a{margin:.2rem .4rem;color:var(--brand);text-decoration:none;font-weight:700}
+h1,h2{color:var(--brand);margin:.4rem 0}
+main{padding:1rem 1.25rem;line-height:1.6;max-width:1000px;margin:auto}
+.section{background:var(--card);margin:1rem 0;padding:1rem;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+ul{padding-left:1.2rem} li::marker{color:var(--brand)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700}
+.small{color:var(--muted);font-size:.95rem}
+footer{border-top:3px solid var(--brand);text-align:center;padding:1rem;font-size:.9rem;color:#555}
+.notice{background:#eef6ff;border:1px solid #cfe2ff;padding:.8rem;border-radius:10px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Infiniment Autiste 77</h1>
+  <p><strong>IA77</strong> — Pour des parcours réellement adaptés</p>
+  <nav>
+    <a href="#apropos">À propos</a> ·
+    <a href="#accomp">Accompagnements</a> ·
+    <a href="#forma">Formations</a> ·
+    <a href="#sorties">Sorties</a> ·
+    <a href="#infos">Cotisation & démarches</a> ·
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <!-- À propos -->
+  <section class="section" id="apropos">
+    <h2>À propos</h2>
+    <div class="grid2">
+      <p><strong>IA77</strong> accompagne enfants, ados et adultes autistes en co-construction avec les familles et les établissements. 
+      Approche respectueuse des profils sensoriels, communication claire, et solutions concrètes au quotidien.</p>
+      <ul>
+        <li>Écoute des besoins & adaptation réelle</li>
+        <li>Coordination familles / intervenants / école</li>
+        <li>Cadre bienveillant, sécurité, dignité</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Accompagnements -->
+  <section class="section" id="accomp">
+    <h2>Accompagnements</h2>
+    <ul>
+      <li><strong>Inclusion scolaire</strong> : PPS, ULIS, aménagements, échanges MDPH</li>
+      <li><strong>Interventions spécialisées</strong> : autonomie, habiletés sociales, communication, gestion sensorielle</li>
+      <li><strong>Soutien aux aidants</strong> : cafés aidants, relais administratif, orientation</li>
+    </ul>
+  </section>
+
+  <!-- Formations -->
+  <section class="section" id="forma">
+    <h2>Formations & sensibilisations</h2>
+    <ul>
+      <li>Bases de l’autisme : profils, communication, aménagements</li>
+      <li>Autisme & école : adaptations pédagogiques, outils visuels</li>
+      <li>Gestion sensorielle & routines apaisantes</li>
+    </ul>
+    <p><a class="btn" href="contact.html">Demander une intervention</a></p>
+  </section>
+
+  <!-- Sorties -->
+  <section class="section" id="sorties">
+    <h2>Sorties & projets</h2>
+    <ul>
+      <li>Parcours “5 sens” : textures, odeurs, sons doux, observation, goûters adaptés</li>
+      <li>Loisirs adaptés : parcs, aquarium, cinéma à son modéré</li>
+      <li>Ateliers autonomie : cuisine simple, courses, médiathèque</li>
+    </ul>
+  </section>
+
+  <!-- Cotisation & démarches -->
+  <section class="section" id="infos">
+    <h2>Cotisation & démarches (sans montants affichés)</h2>
+
+    <p><strong>Cotisation à l’association :</strong> une cotisation mensuelle raisonnable contribue au fonctionnement (loyer, assurance, matériel, gestion). 
+    Elle est ajustée au nombre de demi-journées d’accompagnement, avec un <strong>plafond mensuel</strong>. 
+    <em>Aucune cotisation n’est demandée au mois d’août</em> (fermeture administrative).</p>
+
+    <p class="notice"><strong>Important :</strong> la cotisation sert au fonctionnement de l’association et <strong>ne rémunère pas</strong> les intervenants.</p>
+
+    <p><strong>Rémunération des intervenants :</strong> les intervenants sont rémunérés directement par les familles, sous la coordination d’IA77. 
+    Les paiements peuvent se faire via les <strong>chèques CESU déclarés URSSAF</strong> (traçabilité et simplicité).</p>
+
+    <p><strong>Crédit d’impôt 50&nbsp;% :</strong> les sommes versées pour l’emploi à domicile ouvrent droit au <strong>crédit d’impôt de 50 %</strong> (avec possibilité d’<strong>avance immédiate CESU</strong>). 
+    IA77 accompagne les familles pour toutes les démarches (CESU, URSSAF, attestations fiscales).</p>
+
+    <p class="small">Après contact, un <strong>devis personnalisé</strong> est envoyé selon vos besoins (accompagnement, planning, démarches).</p>
+    <p><a class="btn" href="contact.html">Nous contacter</a></p>
+  </section>
+</main>
+
+<footer>© 2025 Infiniment Autiste 77 — IA77 • SIREN 943507343 • RNA W772011360</footer>
+</body>
+</html>
