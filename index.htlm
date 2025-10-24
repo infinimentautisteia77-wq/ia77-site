@@ -34,6 +34,7 @@ footer{border-top:3px solid var(--brand);text-align:center;padding:1rem;font-siz
     <a href="#sorties">Sorties</a> ·
     <a href="#infos">Cotisation & démarches</a> ·
     <a href="contact.html">Contact</a>
+<a href="devis.html">💶 Devis</a>
   </nav>
 </header>
 
