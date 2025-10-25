@@ -2,450 +2,61 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Infiniment Autiste 77 — IA77</title>
-<meta name="description" content="IA77 — Inclusion scolaire, interventions spécialisées, cafés aidants, sorties adaptées, formations, dons et adhésions.">
+<meta name="description" content="IA77 : accompagnement, scolarisation et actions solidaires pour l’autisme en Île-de-France.">
 <style>
-:root{
-  --bg:#ffffff;--fg:#0b1736;--muted:#5b6b88;--brand:#0a7bdc;--brand2:#f9c80e;--brand3:#ff595e;--brand4:#6ede8a;--card:#f5f7fb;--shadow:0 8px 24px rgba(0,0,0,.08)
-}
+:root{--brand:#0a7bdc;--fg:#0b1736;--bg:#f5f7fb;--card:#ffffff;}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--fg)}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip:focus{position:fixed;left:1rem;top:1rem;background:#000;color:#fff;padding:.5rem 1rem;z-index:999}
-header.site{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e5e9f2}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 1rem}
-.brand{display:flex;gap:.75rem;align-items:center}
-.logo{width:42px;height:42px;border-radius:.6rem;border:2px solid var(--brand);display:grid;place-items:center;font-weight:900;color:var(--brand)}
-.brand-name{font-weight:800}
-.brand-tag{font-size:.85rem;color:var(--muted)}
-nav ul{display:flex;gap:.75rem;list-style:none;margin:0;padding:0}
-nav button.nav-toggle{display:none}
-.actions{display:flex;gap:.5rem}
-.btn, .chip{display:inline-block;padding:.6rem 1rem;border-radius:.6rem;background:var(--brand);color:#fff;border:2px solid var(--brand);font-weight:700}
-.btn.ghost{background:transparent;color:var(--brand)}
-.btn.small{padding:.4rem .7rem;border-radius:.5rem;font-weight:700}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:center;padding:clamp(1rem,5vw,3rem) 1rem;background:linear-gradient(135deg,#eef6ff,#fff)}
-.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin:.4rem 0}
-.hero-cta{display:flex;gap:.75rem;margin-top:.5rem;flex-wrap:wrap}
-.section{padding:1.25rem 1rem}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.card{background:var(--card);padding:1rem;border-radius:.8rem;box-shadow:var(--shadow)}
-.card h3{margin:.3rem 0}
-.strip{padding:1.25rem 1rem;background:linear-gradient(90deg,var(--brand4),#e7fff0)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.pane{background:var(--card);padding:1rem;border-radius:.8rem;box-shadow:var(--shadow)}
-.ticks,.checks{list-style:none;padding-left:0}
-.ticks li::before{content:"✔";margin-right:.5rem}
-.checks li::before{content:"•";margin-right:.5rem;font-weight:900;color:var(--brand)}
-.table-wrap{overflow:auto}
-.table{width:100%;border-collapse:collapse}
-.table th,.table td{border:1px solid #e2e8f0;padding:.6rem;text-align:left}
-.timeline{list-style:none;padding-left:0}
-.timeline li{border-left:4px solid var(--brand);padding:.5rem 1rem;margin:.75rem 0}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.gallery figure{margin:0;background:var(--card);border-radius:.5rem;overflow:hidden;box-shadow:var(--shadow)}
-.gallery img{display:block;width:100%;height:220px;object-fit:cover}
-.gallery figcaption{padding:.5rem .6rem;font-size:.95rem}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.kpi{background:#fff;border:1px solid #e5e9f2;border-radius:.8rem;padding:1rem;text-align:center}
-.kpi strong{font-size:1.6rem;display:block}
-.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0}
-.tab{background:#fff;border:1px solid #dbe4f0;border-radius:.6rem;padding:.4rem .7rem;cursor:pointer}
-.tab[aria-selected="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
-.tabpanel{display:none;margin-top:.75rem}
-.tabpanel.active{display:block}
-.notice{font-size:.95rem;color:var(--muted)}
-footer.site{margin-top:2rem;padding:1.5rem 1rem;border-top:1px solid #e5e9f2;background:#fff}
-footer .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.fine{color:var(--muted);font-size:.9rem}
-#toTop{position:fixed;right:1rem;bottom:1rem;display:none}
-.posters{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.posters .poster{background:var(--card);border-radius:.6rem;overflow:hidden;box-shadow:var(--shadow)}
-.posters img{width:100%;height:auto;display:block}
-
-/* Responsive */
-@media (max-width: 980px){
-  .hero{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
-  .split{grid-template-columns:1fr}
-  .gallery{grid-template-columns:1fr 1fr}
-  .kpis{grid-template-columns:1fr 1fr}
-  .grid-3{grid-template-columns:1fr}
-  footer .cols{grid-template-columns:1fr}
-  nav button.nav-toggle{display:inline-block}
-  nav ul{display:none;position:absolute;right:1rem;top:64px;background:#fff;border:1px solid #e5e9f2;border-radius:.6rem;box-shadow:var(--shadow);flex-direction:column;padding:.5rem}
-  nav ul[aria-expanded="true"]{display:flex}
-}
-body.contrast{--bg:#0b1736;--fg:#ffffff;--muted:#cbd5e1;--card:#182445}
-body.contrast a{color:#6edeff}
-body.contrast header.site,body.contrast footer.site{background:#0f1b3a;color:#fff;border-color:#223255}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;}
+header,footer{background:#fff;border-color:var(--brand);}
+header{border-bottom:3px solid var(--brand);padding:1rem;text-align:center}
+nav a{margin:.2rem .4rem;color:var(--brand);text-decoration:none;font-weight:bold}
+h1,h2{color:var(--brand);margin:.4rem 0}
+main{padding:1rem 1.25rem;max-width:900px;margin:auto}
+.section{background:var(--card);margin:1rem 0;padding:1rem;border-radius:10px;box-shadow:0 0 4px rgba(0,0,0,.05)}
+ul{padding-left:1.2rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;background:var(--brand);color:#fff;text-decoration:none;margin-top:.7rem}
+footer{border-top:3px solid var(--brand);text-align:center;padding:.8rem;font-size:.9rem;margin-top:2rem}
 </style>
 </head>
-<body>
-<a class="skip" href="#contenu">Aller au contenu</a>
 
-<header class="site" role="banner">
-  <div class="header-inner">
-    <div class="brand" aria-label="IA77">
-      <div class="logo" aria-hidden="true">∞</div>
-      <div>
-        <div class="brand-name">Infiniment Autiste 77</div>
-        <div class="brand-tag">IA77 — Pour des parcours réellement adaptés</div>
-      </div>
-    </div>
-    <nav aria-label="Navigation principale">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
-      <ul id="menu">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#accompagnements">Accompagnements</a></li>
-        <li><a href="#formations">Formations</a></li>
-        <li><a href="#sorties">Sorties</a></li>
-        <li><a href="#actualites">Actualités</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-        <li><a href="#tarifs">Tarifs</a></li>
-        <li><a href="#dons">Dons</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<body>
+<header>
+    <h1>Infiniment Autiste 77</h1>
+    <p><strong>IA77</strong> — Pour des parcours réellement adaptés ✨</p>
+    <nav>
+        <a href="#aprepos">À propos</a> ·
+        <a href="#accomp">Accompagnements</a> ·
+        <a href="#forma">Formations</a> ·
+        <a href="#sorties">Sorties</a> ·
+        <a href="#infos">Cotisation & démarches</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="devis.html">🧾 Devis</a>
     </nav>
-    <div class="actions">
-      <button id="contrastBtn" class="btn small" aria-pressed="false" title="Mode contraste élevé">Contraste</button>
-    </div>
-  </div>
 </header>
 
-<main id="contenu">
+<main>
 
-  <!-- Accueil -->
-  <section id="accueil" class="hero">
-    <div>
-      <div class="chip" style="background:#fff;color:var(--brand);border-color:#cfe7ff">Association d’intérêt général</div>
-      <h1>Construire des solutions <em>concrètes</em> pour les familles autistes</h1>
-      <p>Inclusion scolaire (PPS, ULIS), interventions psycho-éducatives, cafés aidants, sorties adaptées, projets d’autonomie.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#contact">Nous contacter</a>
-        <a class="btn ghost" href="#dons">Faire un don</a>
-      </div>
-    </div>
-    <div aria-hidden="true">
-      <svg viewBox="0 0 300 200" width="100%" height="100%" role="img" aria-label="Illustration IA77">
-        <rect width="300" height="200" rx="16" fill="#eef6ff"/>
-        <circle cx="70" cy="80" r="28" fill="#6ede8a"/>
-        <rect x="120" y="60" width="150" height="18" rx="5" fill="#0a7bdc"/>
-        <rect x="120" y="90" width="120" height="12" rx="5" fill="#f9c80e"/>
-        <rect x="120" y="110" width="150" height="12" rx="5" fill="#ff595e"/>
-      </svg>
-    </div>
-  </section>
+<!-- À propos -->
+<section class="section" id="aprepos">
+<h2>À propos</h2>
+<p><strong>IA77</strong> accompagne enfants, adolescents et familles autistes, avec une approche respectueuse des besoins sensoriels, cognitifs et émotionnels.</p>
+<ul>
+    <li>Écoute et adaptation réelle 💙</li>
+    <li>Coordination familles / professionnels</li>
+    <li>Bienveillance, sécurité et dignité</li>
+</ul>
+</section>
 
-  <!-- A propos -->
-  <section id="apropos" class="section">
-    <h2>À propos</h2>
-    <div class="grid-2">
-      <div class="card">
-        <p><strong>IA77</strong> est née pour garantir des parcours adaptés, respectueux et apaisés pour les personnes autistes et leurs familles en Île-de-France.</p>
-        <ul class="ticks">
-          <li>Respect des profils sensoriels & communication claire</li>
-          <li>Co-construction avec familles & établissements</li>
-          <li>Humour, dignité et pragmatisme au quotidien</li>
-        </ul>
-      </div>
-      <div class="kpis">
-        <div class="kpi"><strong>50+</strong><span>Familles accompagnées</span></div>
-        <div class="kpi"><strong>20+</strong><span>Sorties/an</span></div>
-        <div class="kpi"><strong>10</strong><span>Modules de formation</span></div>
-        <div class="kpi"><strong>94</strong><span>Basé à Boissy-St-Léger</span></div>
-      </div>
-    </div>
-    <p class="notice">SIREN : 943507343 — RNA : W772011360</p>
-  </section>
+<!-- Accompagnements -->
+<section class="section" id="accomp">
+<h2>Accompagnements</h2>
+<p>Programme individualisé, soutenant la scolarisation et l’autonomie dans la vie quotidienne.</p>
+<p>Accompagnements à domicile, école, ateliers… selon les besoins.</p>
+<a href="devis.html" class="btn">Demander un devis</a>
+</section>
 
-  <!-- Accompagnements (onglets) -->
-  <section id="accompagnements" class="section">
-    <h2>Accompagnements</h2>
-    <div class="tabs" role="tablist" aria-label="Accompagnements">
-      <button class="tab" role="tab" aria-selected="true" aria-controls="tab-sco" id="t-sco">Inclusion & scolarité</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-int" id="t-int">Interventions spécialisées</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-aid" id="t-aid">Aidants & répit</button>
-    </div>
-    <div id="tab-sco" class="tabpanel active" role="tabpanel" aria-labelledby="t-sco">
-      <ul class="checks">
-        <li>Appui <strong>PPS</strong>, échanges école/MDPH</li>
-        <li>Recherche de <strong>classe adaptée</strong> (ULIS, dispositifs) et organisation d’une scolarisation même partielle</li>
-        <li>Aménagements sensoriels & outils visuels</li>
-      </ul>
-    </div>
-    <div id="tab-int" class="tabpanel" role="tabpanel" aria-labelledby="t-int">
-      <ul class="checks">
-        <li>Autonomie du quotidien (habillage, repas, trajets)</li>
-        <li>Habiletés sociales, loisirs, communication</li>
-        <li>Gestion sensorielle & routines apaisantes</li>
-      </ul>
-    </div>
-    <div id="tab-aid" class="tabpanel" role="tabpanel" aria-labelledby="t-aid">
-      <ul class="checks">
-        <li><strong>Café Aidants</strong> mensuel : échanges, questions, détente</li>
-        <li>Orientation <strong>CESU/URSSAF</strong> et aides</li>
-        <li>Remplissage de dossiers (MDPH, transports, etc.)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Formations -->
-  <section id="formations" class="section strip">
-    <h2>Formations & sensibilisations</h2>
-    <div class="table-wrap">
-      <table class="table">
-        <thead><tr><th>Module</th><th>Public</th><th>Objectifs</th></tr></thead>
-        <tbody>
-          <tr><td>Bases de l’autisme</td><td>Tout public</td><td>Profils sensoriels, communication, aménagements</td></tr>
-          <tr><td>Autisme & école</td><td>Enseignants/AESH</td><td>PPS et adaptations pédagogiques concrètes</td></tr>
-          <tr><td>Outils visuels & routines</td><td>Parents/Pros</td><td>Structurer le quotidien, prévenir les surcharges</td></tr>
-          <tr><td>Gestion sensorielle</td><td>Parents/Pros</td><td>Identifier déclencheurs, créer des espaces apaisants</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p><a class="btn" href="#contact">Demander un devis</a></p>
-  </section>
-
-  <!-- Sorties & Projets -->
-  <section id="sorties" class="section">
-    <h2>Sorties & Projets</h2>
-    <ul class="timeline">
-      <li><h3>Projet 5 sens</h3><p>Parcours sensoriels : textures, odeurs, sons doux, observation, goûters adaptés.</p></li>
-      <li><h3>Sorties loisirs</h3><p>Parc Astérix, Aquarium, Parc d’Acclimatation, cinéma & séances calmes.</p></li>
-      <li><h3>Ateliers autonomie</h3><p>Cuisine simple, courses, bibliothèque, « appartement pédagogique ».</p></li>
-    </ul>
-    <h3>Affiches & documents (A5)</h3>
-    <div class="posters">
-      <article class="poster">
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'><rect width='400' height='260' rx='16' fill='%23eef6ff'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%230a7bdc'>Café Aidants — A5</text></svg>" alt="Affiche Café Aidants">
-        <div style="padding:0 1rem 1rem">
-          <strong>Café Aidants — A5 vertical</strong><br>Mercredi 26 novembre, 14h30–17h — Inscription via QR.
-        </div>
-      </article>
-      <article class="poster">
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'><rect width='400' height='260' rx='16' fill='%23fff7e0'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='%23ff595e'>Dons IA77 — A5</text></svg>" alt="Affiche Dons IA77">
-        <div style="padding:0 1rem 1rem">
-          <strong>Soutenir IA77 — Cotizup / HelloAsso</strong><br>Scannez le QR code pour contribuer à notre nouveau local.
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Actualités (auto) -->
-  <section id="actualites" class="section">
-    <h2>Actualités</h2>
-    <div id="news" class="cards">
-      <article class="card"><p class="fine">Chargement des actualités…</p></article>
-    </div>
-    <p class="fine">Astuce : modifiez les actualités dans le petit tableau ci-dessous (“Données actus”).</p>
-  </section>
-
-  <!-- Galerie -->
-  <section id="galerie" class="section strip">
-    <h2>Galerie</h2>
-    <div class="gallery">
-      <figure><img alt="Projet 5 sens" src="https://picsum.photos/seed/ia77a/600/400"><figcaption>Projet 5 sens</figcaption></figure>
-      <figure><img alt="Sortie nature" src="https://picsum.photos/seed/ia77b/600/400"><figcaption>Sortie nature</figcaption></figure>
-      <figure><img alt="Atelier autonomie" src="https://picsum.photos/seed/ia77c/600/400"><figcaption>Atelier autonomie</figcaption></figure>
-    </div>
-  </section>
-
-  <!-- Tarifs -->
-  <section id="tarifs" class="section">
-    <h2>Tarifs & adhésions</h2>
-    <div class="grid-3">
-      <div class="card">
-        <h3>Adhésion</h3>
-        <p>Adhésion annuelle : <strong>15 €</strong></p>
-        <p class="fine">Reçus et factures délivrés par l’association.</p>
-      </div>
-      <div class="card">
-        <h3>Cotisation type</h3>
-        <p>Cotisation mensuelle indicative : <strong>50 €</strong></p>
-        <p class="fine">Selon accompagnement spécialisé demandé.</p>
-      </div>
-      <div class="card">
-        <h3>Accompagnements</h3>
-        <ul class="checks">
-          <li>Psycho-éducateurs / Éducateurs spécialisés</li>
-          <li>Forfaits sur devis (selon besoins)</li>
-          <li>Orientation <strong>CESU/URSSAF</strong> possible</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dons -->
-  <section id="dons" class="section strip">
-    <h2>Dons</h2>
-    <p>Vous pouvez nous soutenir :</p>
-    <p>
-      <a class="btn" href="https://www.cotizup.com/pour-un-nouveau-local" target="_blank" rel="noopener">Donner sur Cotizup</a>
-      <a class="btn ghost" href="https://www.helloasso.com/associations/infiniment-autiste-77/collectes/sos-ia77" target="_blank" rel="noopener">Donner sur HelloAsso</a>
-    </p>
-    <p class="fine">Transparence : budgets, devis et factures disponibles sur demande.</p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="grid-2">
-      <div class="card">
-        <p>📍 Boissy-Saint-Léger (94)<br>
-           📧 <a href="mailto:infinimentautiste.ia77@gmail.com">infinimentautiste.ia77@gmail.com</a><br>
-           📱 <a href="tel:+33766378462">07 66 37 84 62</a></p>
-        <p class="fine">Réseaux sociaux : prochainement.</p>
-      </div>
-      <div class="card">
-        <form id="contactForm">
-          <label>Nom<br><input name="nom" required></label><br>
-          <label>Email<br><input name="email" type="email" required></label><br>
-          <label>Votre message<br><textarea name="message" rows="5" required></textarea></label><br>
-          <button class="btn" type="submit">Envoyer</button>
-          <p class="fine">Par défaut, l’envoi ouvre votre email. Pour un stockage direct, ajoutez une URL Formspree (voir ci-dessous).</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mentions -->
-  <section class="section">
-    <h2>Mentions légales</h2>
-    <p>Éditeur : Infiniment Autiste 77 — IA77, Boissy-Saint-Léger (94). • SIREN : 943507343 • RNA : W772011360</p>
-  </section>
-
-  <!-- Données actus (modifiable facilement) -->
-  <script id="news-data" type="application/json">
-  [
-    {"date":"2025-11-26","category":"Café Aidants","title":"Café Aidants — Mercredi 26 novembre (14h30–17h)","text":"Activités en lien avec l’autisme + temps d’échanges. Inscription via QR code.","link":""},
-    {"date":"2025-10-21","category":"Sortie","title":"Séance cinéma adaptée — Servon","text":"Projection en effectif réduit, son modéré. L’association accompagne.","link":""},
-    {"date":"2025-10-15","category":"Formations","title":"Nouveaux modules de sensibilisation","text":"Dates et tarifs à venir. Interventions possibles en établissements.","link":"#formations"}
-  ]
-  </script>
-
-</main>
-
-<footer class="site" role="contentinfo">
-  <div class="cols">
-    <div>
-      <h3>IA77</h3>
-      <p>Association d’intérêt général basée à Boissy-Saint-Léger (94).</p>
-      <p>Mise à jour : <span id="updateDate"></span></p>
-    </div>
-    <div>
-      <h3>Contacts</h3>
-      <ul class="ticks">
-        <li><a href="tel:+33766378462">07 66 37 84 62</a></li>
-        <li><a href="mailto:infinimentautiste.ia77@gmail.com">infinimentautiste.ia77@gmail.com</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Soutenir</h3>
-      <p><a href="#dons" class="btn small">Faire un don</a></p>
-    </div>
-  </div>
-  <p class="fine">© <span id="year"></span> Infiniment Autiste 77 — Tous droits réservés</p>
-</footer>
-
-<button id="toTop" class="btn small" aria-label="Remonter en haut">↑ Haut</button>
-
-<script>
-/* Mobile nav */
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.getElementById('menu');
-if (toggle && menu){
-  toggle.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!open));
-    menu.setAttribute('aria-expanded', String(!open));
-    menu.style.display = open ? 'none' : 'flex';
-  });
-}
-
-/* Contrast mode */
-const contrastBtn = document.getElementById('contrastBtn');
-if (contrastBtn){
-  contrastBtn.addEventListener('click', () => {
-    const on = document.body.classList.toggle('contrast');
-    contrastBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  });
-}
-
-/* Back to top */
-const toTop = document.getElementById('toTop');
-window.addEventListener('scroll', () => {
-  toTop.style.display = window.scrollY > 600 ? 'inline-block' : 'none';
-});
-toTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
-
-/* Tabs */
-document.querySelectorAll('.tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected','false'));
-    tab.setAttribute('aria-selected','true');
-    document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
-    document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
-  });
-});
-
-/* News render */
-(function renderNews(){
-  const holder = document.getElementById('news');
-  const raw = document.getElementById('news-data');
-  if (!holder || !raw) return;
-  try{
-    const data = JSON.parse(raw.textContent || '[]').sort((a,b)=> (b.date||'').localeCompare(a.date||''));
-    holder.innerHTML = '';
-    data.forEach(item=>{
-      const art = document.createElement('article');
-      art.className = 'card';
-      art.innerHTML = `
-        <div class="fine">${(item.date||'').replaceAll('-','/')} — ${item.category||'Actu'}</div>
-        <h3>${item.title||''}</h3>
-        <p>${item.text||''}</p>
-        ${item.link ? `<p><a class="btn small ghost" href="${item.link}">Détails</a></p>` : ''}`;
-      holder.appendChild(art);
-    });
-  }catch(e){ holder.innerHTML = '<p class="fine">Impossible de charger les actualités.</p>'; }
-})();
-
-/* Contact form
-   - Par défaut : ouvre l’email (mailto)
-   - Pour stocker directement via Formspree, décommentez la ligne:
-     window.FORM_ENDPOINT = 'https://formspree.io/f/XXXXXXXX';
-*/
-const form = document.getElementById('contactForm');
-if (form){
-  form.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    if (window.FORM_ENDPOINT){
-      const data = Object.fromEntries(new FormData(form).entries());
-      fetch(window.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
-      .then(r=>{ if(!r.ok) throw new Error(); form.innerHTML='<p><strong>Merci !</strong> Votre message a été envoyé.</p>'; })
-      .catch(()=> alert("Désolé, envoi impossible. Écrivez-nous à infinimentautiste.ia77@gmail.com"));
-    } else {
-      const d = new FormData(form);
-      const subject = encodeURIComponent("Contact IA77 — " + (d.get('nom')||''));
-      const body = encodeURIComponent((d.get('message')||'') + "\n\n— " + (d.get('email')||''));
-      window.location.href = `mailto:infinimentautiste.ia77@gmail.com?subject=${subject}&body=${body}`;
-    }
-  });
-}
-
-/* Footer dates */
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('updateDate').textContent = new Date().toLocaleDateString('fr-FR');
-</script>
-
-</body>
 <!-- Formations -->
 <section class="section" id="forma">
 <h2>Formations</h2>
@@ -453,4 +64,26 @@ document.getElementById('updateDate').textContent = new Date().toLocaleDateStrin
 <p><strong>*Formations animées par des éducateurs spécialisés et des professionnels formés à l'autisme.</strong></p>
 <p><strong>Début des formations : janvier — inscription nécessaire ✅</strong></p>
 </section>
-  </html>
+
+<!-- Sorties -->
+<section class="section" id="sorties">
+<h2>Sorties & activités</h2>
+<p>Moments de partage : parcs, cinéma, médiation animale, espaces adaptés.</p>
+</section>
+
+<!-- Informations -->
+<section class="section" id="infos">
+<h2>Cotisation & démarches</h2>
+<p>L’association aide aux démarches administratives, à la recherche de solutions scolaires et aux demandes MDPH.</p>
+<p>Possibilité de règlement en CESU (crédit d’impôt 50% pour les familles 🇫🇷).</p>
+<a href="contact.html" class="btn">Nous contacter</a>
+</section>
+
+</main>
+
+<footer>
+Infiniment Autiste 77 — IA77 · Ensemble, construisons des parcours dignes ✨
+</footer>
+
+</body>
+</html>
